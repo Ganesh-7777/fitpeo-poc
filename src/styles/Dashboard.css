@@ -1,0 +1,99 @@
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--spacing-6);
+}
+
+.dashboard-section {
+  /* padding: var(--spacing-6); */
+  /* box-shadow: var(--shadow-sm); */
+}
+
+.dashboard-section-heading {
+  font-size: 1.25rem;
+  font-weight: 900;
+  margin-bottom: var(--spacing-6);
+  color: #2d2856;
+}
+
+.dashboard-section-subheading {
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: var(--spacing-4);
+  margin-top: 20px;
+  color: var(--neutral-700);
+}
+
+.anatomy-section {
+  grid-column: span 6;
+  position: relative;
+  min-height: 400px;
+  padding: 20px 0px 20px 30px;
+}
+
+.health-status-cards {
+  grid-column: span 7;
+  padding: 0;
+}
+
+.calendar-view {
+  grid-column: span 6;
+  min-height: 400px;
+  background-color: var(--neutral-200);
+  padding-left: 26px;
+}
+
+.upcoming-schedule {
+  grid-column: span 5;
+  padding: var(--spacing-0);
+}
+
+.activity-feed {
+  grid-column: span 5;
+}
+
+@media (max-width: 1200px) {
+  .anatomy-section {
+    grid-column: span 6;
+  }
+
+  .health-status-cards {
+    grid-column: span 6;
+  }
+
+  .calendar-view {
+    grid-column: span 6;
+  }
+
+  .upcoming-schedule {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 992px) {
+  .anatomy-section {
+    grid-column: span 12;
+  }
+
+  .health-status-cards {
+    grid-column: span 12;
+  }
+
+  .calendar-view {
+    grid-column: span 12;
+  }
+
+  .upcoming-schedule {
+    grid-column: span 12;
+  }
+}
+
+/* Animation for charts */
+@keyframes grow {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}

@@ -1,0 +1,95 @@
+.anatomy-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+  /* padding: var(--spacing-4); */
+  position: relative;
+  flex-direction: row;
+}
+
+.anatomy-figure {
+  position: relative;
+  height: 410px;
+  background-color: var(--neutral-200);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-4);
+}
+
+.anatomy-image {
+  height: 100%;
+}
+
+.anatomy-indicator {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+  animation: pulse 2s infinite;
+}
+
+.anatomy-indicator::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.anatomy-label {
+  position: absolute;
+  background-color: #00e4ef;
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--border-radius-md);
+  font-size: 0.8rem;
+  font-weight: 500;
+  box-shadow: var(--shadow-sm);
+  white-space: nowrap;
+  z-index: 10;
+  transform: translate(-50%, -100%);
+  margin-top: -8px;
+}
+
+.anatomy-label-1 {
+  background-color: #3a33a6; /* Soft red */
+  color: #ffffff;
+}
+
+.anatomy-label-2 {
+  background-color: #00e4ef; /* Soft green */
+}
+
+/* Add more label styles as needed */
+
+.anatomy-label::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  transform: translateX(-50%) rotate(45deg);
+  width: 8px;
+  height: 8px;
+  background-color: var(--neutral-100);
+}
+
+.dashboard-section-header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.dashboard-section-subheading {
+  margin-left: auto;
+  color: #2d2856;
+}
+
+@media (max-width: 768px) {
+  .anatomy-figure {
+    height: 280px;
+  }
+}

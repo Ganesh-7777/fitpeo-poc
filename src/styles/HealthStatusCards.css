@@ -1,0 +1,96 @@
+.health-status-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-4);
+  width: 225px;
+  align-items: stretch; /* Ensure cards stretch to match height */
+}
+
+.health-status-card {
+  background-color: var(--neutral-200);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-5); /* Reduce padding for smaller cards */
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--primary-color);
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%; /* Ensure cards take full width of the grid */
+  grid-column: span 7;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 1px solid var(--neutral-300); /* Add a border */
+}
+
+.health-status-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.health-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2); /* Add spacing between the icon and title */
+}
+
+.health-card-title {
+  font-weight: 700; /* Make the title bold */
+  font-size: 1.2rem; /* Increase the font size */
+  margin: 0; /* Remove any default margin */
+  color: #2d2856;
+}
+
+.health-card-date {
+  color: var(--neutral-600);
+  font-size: 0.75rem;
+  margin-bottom: var(--spacing-2);
+  margin-top: var(--spacing-4);
+}
+
+.health-card-status {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: var(--spacing-2);
+}
+
+.health-card-icon {
+  display: flex;
+  margin-right: 10px;
+}
+
+.health-card-icon-container {
+  display: flex;
+}
+
+.w3-light-grey,
+.w3-hover-light-grey:hover,
+.w3-light-gray,
+.w3-hover-light-gray:hover {
+  color: #000 !important;
+  background-color: #f1f1f1 !important;
+}
+
+.w3-blue,
+.w3-hover-blue:hover {
+  color: #fff !important;
+  background-color: #2196f3 !important;
+}
+
+@media (max-width: 768px) {
+  .health-status-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .health-status-grid {
+    grid-template-columns: 1fr;
+  }
+}
